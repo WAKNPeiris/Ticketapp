@@ -1,10 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final user = FirebaseAuth.instance.currentUser!;
+  final TextEditingController _textFieldController = TextEditingController();
 
   void signUserOut() {
     FirebaseAuth.instance.signOut();
@@ -52,20 +54,22 @@ class HomePage extends StatelessWidget {
       //     //     style: TextStyle(fontSize: 20)),
       //     ),
 
-      body: const Center(
+      body: Center(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Enter Price',
               labelStyle: TextStyle(color: Colors.black), // Label color
               border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.black),
-              ),
+                  // borderSide: BorderSide(color: Colors.black),
+                  ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black),
               ),
             ),
+            keyboardType: TextInputType.number,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           ),
         ),
       ),
