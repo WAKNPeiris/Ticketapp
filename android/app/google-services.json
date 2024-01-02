@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940352167567",
+    "project_id": "justgoproject-71919",
+    "storage_bucket": "justgoproject-71919.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940352167567:android:c514fa9fcdc83d6e599afa",
+        "android_client_info": {
+          "package_name": "com.example.login_signup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfKbCQ2C3eY_7_ZwhG8SoKk7GHZiCRxrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
