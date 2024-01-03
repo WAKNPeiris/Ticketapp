@@ -7,11 +7,30 @@ class PaymentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Payment Page'),
+        title: const Text('Payment'),
       ),
-      body: Center(
-        child: Text('This is the Payment Page'),
-      ),
+      body: const Center(
+          child: Column(
+        children: [
+          SizedBox(
+            height: 15.0,
+          ),
+          Text(
+            'Pay for your Ticket',
+            style: TextStyle(
+              color: Color.fromARGB(255, 101, 100, 100),
+              fontSize: 25.00,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 15.0),
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'Price :',
+            ),
+          )
+        ],
+      )),
     );
   }
 }
